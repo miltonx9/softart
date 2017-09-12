@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
   <head>
-  <title>Federação Amapaense de Jiu-Jitsu Esportivo</title>
+  <title>FEDERAÇÃO DE JIU JITSU DO ESTADO DO AMAPÁ - FEJJA</title>
 <META NAME="DESCRIPTION" CONTENT="FEJJA">
 <META NAME="KEYWORDS" CONTENT="Mundo,  Arte, Suave, jiu-jitsu, amapá, fejja">
 <META NAME="OWNER" CONTENT="mundo@mundo.com.br">
@@ -16,26 +16,60 @@
     <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/bootstrap.css">
 
+<?php include "function/mascaras.js" ?>
+
   </head>
   
   
   
- <body>
-  <main class="container-fluid">
-<?php include "includ/header.php" ?>
+<body>
+<main class="container-fluid">
+	<?php include "includ/header.php" ?>
+    <?php include "includ/nav.php" ?>
 
-<?php include "includ/nav.php" ?>
+								<?php
+                                    if(isset($_GET['m']))
+                                        if(@$m == false)
+                                {
+                                     $m = 'home';
+                                }
+                                        switch (@$_GET['m'])
+                                {
+                                    
+                                    case "home":
+                                       include "includ/home.php";
+                                        break;
+                                    
+                                    case "usuario":
+                                       include "includ/usuario.php";
+                                        break;
+                                    
+									case "entrarusuario":
+                                       include "includ/entrarusuario.php";
+                                        break;
+									
+									case "professor":
+                                       include "includ/professor.php";
+                                        break;
+									
+									case "entrarprofessor":
+                                       include "includ/entrarprofessor.php";
+                                        break;
+                                        
+										default:
+                                        include "includ/home.php";
+                                }
+                                ?>
+                                
+	<?php include "includ/footer.php" ?>
 
-<?php include "includ/section.php" ?>
-<?php include "includ/footer.php" ?>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- Pra funcionar o boot Optional JavaScript -->
+    <!-- Pra funcionar o boot jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="js/jquery-3.2.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>  
     
-    </main>
+</main>
 </body>
 </html>
