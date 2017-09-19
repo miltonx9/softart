@@ -1,75 +1,73 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
-  <title>FEDERAÇÃO DE JIU JITSU DO ESTADO DO AMAPÁ - FEJJA</title>
-<META NAME="DESCRIPTION" CONTENT="FEJJA">
-<META NAME="KEYWORDS" CONTENT="Mundo,  Arte, Suave, jiu-jitsu, amapá, fejja">
-<META NAME="OWNER" CONTENT="mundo@mundo.com.br">
-<META HTTP-EQUIV="VW96.OBJECT TYPE" CONTENT="Homepage">
-<META NAME="RATING" CONTENT="General">
-<META NAME="ROBOTS" CONTENT="index,follow">
-<META NAME="REVISIT-AFTER" CONTENT="10 days">
-
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <title>Federação Amapaense de Jiu-Jitsu Esportivo</title>
+    <meta name='description' content='FEJJA'>
+    <meta name='keywords' content='Mundo,  Arte, Suave, jiu-jitsu, amapá, fejja'>
+    <meta name='rating' content='General'>
+    <meta name='revisit-after' content='10 days'>
+    <!-- Required meta tags -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.css">
 
-<?php include "function/mascaras.js" ?>
-
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script type="text/javascript" src="js/iconwc.js"></script>
+    <script src="js/mascaras.js"></script>
   </head>
-  
-  
-  
-<body>
-<main class="container-fluid">
-	<?php include "includ/header.php" ?>
-    <?php include "includ/nav.php" ?>
-
-								<?php
-                                    if(isset($_GET['m']))
-                                        if(@$m == false)
-                                {
-                                     $m = 'home';
-                                }
-                                        switch (@$_GET['m'])
-                                {
-                                    
-                                    case "home":
-                                       include "includ/home.php";
-                                        break;
-                                    
-                                    case "usuario":
-                                       include "includ/usuario.php";
-                                        break;
-                                    
-									case "entrarusuario":
-                                       include "includ/entrarusuario.php";
-                                        break;
-									
-									case "professor":
-                                       include "includ/professor.php";
-                                        break;
-									
-									case "entrarprofessor":
-                                       include "includ/entrarprofessor.php";
-                                        break;
-                                        
-										default:
-                                        include "includ/home.php";
-                                }
-                                ?>
-                                
-	<?php include "includ/footer.php" ?>
-
-
-    <!-- Pra funcionar o boot Optional JavaScript -->
-    <!-- Pra funcionar o boot jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>  
-    
-</main>
-</body>
+  <body>
+    <main class="container-fluid">
+      <?php include "includ/header.php" ?>
+      <div class="row">
+        <?php include "includ/aside.php" ?>
+        <section class="col-md-10">
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-white p-4">
+              <h4 class="text-secondary"></h4>
+              <!-- Aqui a imagem da logo mini -->
+              <img src="img/minilogo.jpg" class="img-fluid" alt="Responsive image">
+              <!-- Aqui Em texto para exibir tire o comentario -->
+              <!-- <span class="text-muted">FEDERAÇÃO DE JIU JITSU DO ESTADO DO AMAPÁ - FEJJA</span><br> -->
+              <!-- <span class="text-muted">CNPJ: 16.668.541/0001-22</span> -->
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark text-danger row">
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler">FEJJA</span>
+            </button>
+            <p>
+              <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Novo</button>
+            </p>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">Estamos apenas começando, ainda tem muito mais, cadastros para usuários, atletas e professores, serão algumas das formas dinâmicas de interagir com a FEJJA. Fique atento e quando disponível não perca tempo.
+              <p>Obrigado.</p>
+              <!-- Aqui a imagem da logo mini dentro do Collapse -->
+              <!-- <img src="img/minilogo.jpg" class="img-fluid" alt="Responsive image">-->
+              </div>
+            </div>
+          </nav>
+          <?php include "includ/nav.php" ?>
+          <?php
+            if(!empty($_REQUEST['url']))
+            {
+              $url=$_REQUEST['url'];
+              require ($url);
+            }
+            else
+            {
+              require "includ/home.php";
+            }
+          ?>
+          <?php include "includ/footer.php" ?>
+        </section>
+      </div>      
+      <!-- Pra funcionar o boot Optional JavaScript -->
+      <!-- Pra funcionar o boot jQuery first, then Popper.js, then Bootstrap JS -->
+    	<script src="js/jquery-3.2.1.slim.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+    </main>
+  </body>
 </html>

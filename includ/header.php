@@ -1,41 +1,39 @@
-<div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-white p-4">
-      <h4 class="text-secondary"></h4>
-      
-      <!-- Aqui a imagem da logo mini -->
-      <img src="img/minilogo.jpg" class="img-fluid" alt="Responsive image">
+      <header class="">
+        <nav class="navbar navbar-expand-lg navbar-dark row" style="background-color: #A38E17">
+          <a class="navbar-brand" href="index.php">FEJJA</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-<!-- Aqui Em texto para exibir tire o comentario -->
-      <!-- <span class="text-muted">FEDERAÇÃO DE JIU JITSU DO ESTADO DO AMAPÁ - FEJJA</span><br> -->
-      <!-- <span class="text-muted">CNPJ: 16.668.541/0001-22</span> -->
-
-    
-    </div>
-  </div>
-  <nav class="navbar navbar-dark bg-dark text-danger">
-    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler">FEJJA</span>
-    </button>
-   
-   				 <p>
-                 <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                    Novo
-                 </button>
-              </p>
-               <div class="collapse" id="collapseExample">
-                   <div class="card card-body">
-Estamos apenas começando, ainda tem muito mais, cadastros para usuários, atletas e professores, serão algumas das formas dinâmicas de interagir com a FEJJA.
-Fique atento e quando disponível não perca tempo.
-
-                    <p>Obrigado.</p>
-                     <!-- Aqui a imagem da logo mini dentro do Collapse -->
-                     
-                   <!-- <img src="img/minilogo.jpg" class="img-fluid" alt="Responsive image">-->
-                   
-                   </div>
-                 </div>
-  </nav>
-  
-  
-</div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-global" /></svg-icon></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-bubble-message" /></svg-icon></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-circle-help" /></svg-icon></a>
+              </li>
+            </ul>
+            <div class="form-inline my-2 my-lg-0">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-global" /></svg-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-bubble-message" /></svg-icon></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-circle-help" /></svg-icon></a>
+                </li>
+              </ul>
+            </div>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Busca" aria-label="Search">
+              <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+          </div>
+        </nav>
+      </header>
