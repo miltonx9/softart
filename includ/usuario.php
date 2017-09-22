@@ -1,6 +1,5 @@
 <form>
-
-      <div class="form-group">
+  <div class="form-group">
     <label for="xxx">Nome</label>
     <input type="text" class="form-control" id="xxx" aria-describedby="xx" placeholder="Digite seu nome" required >
     <small id="" class="form-text text-muted">Digite seu nome completo</small>

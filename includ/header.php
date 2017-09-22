@@ -8,15 +8,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-global" /></svg-icon></a>
+                <a class="nav-link" href="#">Link 1</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-bubble-message" /></svg-icon></a>
+                <a class="nav-link" href="#">link 2</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><svg-icon><src href="sprite.svg#si-glyph-circle-help" /></svg-icon></a>
+                <a class="nav-link" href="#">link 3</a>
               </li>
             </ul>
+            <?php 
+              if ($_SESSION['login']) {
+            ?>
             <div class="form-inline my-2 my-lg-0">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -30,6 +33,7 @@
                 </li>
               </ul>
             </div>
+            <?php } ?>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="text" placeholder="Busca" aria-label="Search">
               <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
