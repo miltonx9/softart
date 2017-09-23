@@ -8,10 +8,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="#">Link 1</a>
+                <a class="nav-link" href="?pag=includ/usuario.php">Usuário</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">link 2</a>
+                <a class="nav-link" href="?pag=includ/entrarusuario.php">login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">link 3</a>

@@ -23,7 +23,7 @@
     <script src="js/mascaras.js"></script>
   </head>
   <body>
-    <main class="container-fluid">
+    <main class="container-fluid ">
       <?php include "includ/header.php" ?>
       <div class="row">
       <?php 
@@ -72,9 +72,25 @@
 	      </section>
 	    <?php
 	    	}
+	    	
+
+
+
 	    	else
 	    	{
-      		echo "Voçe precisa logar para ter acesso a esta area!";
+	    		echo "<section class='col-md-12'>";
+	    	?>
+      		<?php
+	          if(!empty($_REQUEST['pag']))
+	          {
+	            $url=$_REQUEST['pag'];
+	            require ($url);
+	          }
+	          else
+	          {
+	            require "includ/home.php";
+	          }
+      		 echo "</section>";
       	}
       ?>
       </div>      
